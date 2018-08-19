@@ -1,7 +1,5 @@
 
 package modelo;
-import vista.*;
-import controlador.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -90,5 +88,64 @@ public class ModeloPremios {
            e.printStackTrace();
        }
        return null;
+    }
+    
+    public void agregarPremio( int vIdPrem, String vDes, int vPuntos, int vStock)
+    {
+        try
+        {
+            //Para abrir una conxion a la BD
+            Connection con = conexion.abrirConexion();
+            //Para Ejecutar la consulta
+            //Statement s = con.createStatement();
+            //JOptionPane.showMessageDialog(null, vConFecha+"---"+vConHora+"---"+vConTipo+"---"+vConNombre+"---"+vConPeso);
+            String query  = "INSERT INTO sucursal( Id_premio, Descripcion, Stock, Puntos) values (?,?,?,?)";
+            PreparedStatement preparedStatement = con.prepareStatement(query);
+            preparedStatement.setInt(1,vIdPrem);
+            preparedStatement.setString(2,vDes);
+            preparedStatement.setInt(3,vPuntos);
+            preparedStatement.setInt(4,vStock);
+            preparedStatement.executeUpdate();
+            //JOptionPane.showMessageDialog(null, "Registro agregado");
+            conexion.cerrarConexion(con);
+        }
+        catch(SQLException e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }
+    
+    public boolean editarPremio( int vIdPrem, String vDes, int vPuntos, int vStock)
+    {
+        try
+        {
+            Connection con = conexion .abrirConexion();
+            Statement s = con.createStatement();
+            System.out.println("UPDATE premios SET Id_premio ='"+vIdPrem+"', descripcion = '"+vDes+"', Puntos = '"+vPuntos+"', Stock = '"+vStock+"' WHERE Id_premio = "+vIdPrem+";");
+            s.executeUpdate("UPDATE premios SET Id_premio ='"+vIdPrem+"', descripcion = '"+vDes+"', Puntos = '"+vPuntos+"', Stock = '"+vStock+"' WHERE Id_premio = "+vIdPrem+";");
+
+            conexion.cerrarConexion(con);
+            return true;
+        
+        } catch (SQLException e) {
+            return false;
+        } 
+    }
+    
+    public boolean eliminarPremio( int idPremio)
+    { 
+        try
+        {
+            Connection con = conexion.abrirConexion();
+            Statement s = con.createStatement();
+            s.executeUpdate("delete from premios where Id_premio="+idPremio+";") ;
+                conexion.cerrarConexion(con);
+                return true;
+                    
+        } catch (SQLException e) 
+        {
+            return false;
+        }
+        
     }
 }
