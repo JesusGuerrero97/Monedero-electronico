@@ -104,13 +104,13 @@
                   <Component id="jLabel4" min="-2" pref="123" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabel2" max="32767" attributes="0"/>
-                      <Component id="txtUsuario" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jLabel2" pref="30" max="32767" attributes="0"/>
+                      <Component id="txtUsuario" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabel3" max="32767" attributes="0"/>
-                      <Component id="jPassword" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jLabel3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="jPassword" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btnIniciaSesion" min="-2" pref="63" max="-2" attributes="0"/>
@@ -144,7 +144,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Im&#xe1;genes/imgUser2.png"/>
+              <Image iconType="3" name="/img/imgUser2.png"/>
             </Property>
           </Properties>
         </Component>
@@ -156,7 +156,7 @@
         <Component class="javax.swing.JButton" name="btnIniciaSesion">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Im&#xe1;genes/BTNINICIAR.png"/>
+              <Image iconType="3" name="/img/BTNINICIAR.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -177,7 +177,7 @@
         <Component class="javax.swing.JButton" name="btnSalir">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Im&#xe1;genes/btnSalir.png"/>
+              <Image iconType="3" name="/img/btnSalir.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
