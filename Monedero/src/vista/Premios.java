@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vista;
+>>>>>>> e97e4bcfd7c2431508ec4cab4d603d1404a64f44
 
 package vista;
 
