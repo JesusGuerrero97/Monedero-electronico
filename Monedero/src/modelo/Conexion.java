@@ -23,7 +23,7 @@ public class Conexion {
         try{
         DriverManager.registerDriver(new com.mysql.jdbc.Driver());
         con = DriverManager.getConnection(
-        "jdbc:mysql://localhost:3306/monedero","root","");
+        "jdbc:mysql://localhost:3306/banco","root","");
         }catch(SQLException e){
             System.out.println("Error de conexion. No se pudo abrir la conexion");
             con = null;

@@ -1,14 +1,12 @@
 
 package controlador;
-import modelo.*;
+import modelo.;
+import Vista.Login;
 
-import modelo.ModSQLInicioSesion;
-import vista.Login;
-import controlador.ControladorMenu;
+import modelo.ModeloMenu;
+import vista.;
 
-
-
-import Controlador.*;
+import Controlador.ControladorMenuPrincipal;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -42,7 +40,7 @@ public class ControladorLogin implements ActionListener, MouseListener{
             if(resultado == 1){   //si se encontró una coincidencia en el inicio de sesion    
                 Log.dispose(); 
                 JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "Mensaje de bienvenida", JOptionPane.INFORMATION_MESSAGE);
-                ControladorMenu conMenu = new ControladorMenu();
+                ControladorMenuPrincipal conMenu = new ControladorMenuPrincipal();
                 conMenu.iniciarVista();
             }
             else{

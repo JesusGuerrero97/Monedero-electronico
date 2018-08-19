@@ -9,6 +9,6 @@ package controlador;
  *
  * @author 8a
  */
-public class ControladorMenu {
+class ModeloMenuPrincipal {
     
 }
